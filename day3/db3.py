@@ -49,4 +49,6 @@ def insert_row():
     cursor.close()
     disconnect_db(connection)
 
+
 insert_row()
+
