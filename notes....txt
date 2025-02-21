@@ -25,3 +25,17 @@ Empty set (0.01 sec)
 mysql> create table
 
 
+alwaysssss take input from command line....
+5 or less path good
+5 - 8 okay
+more than 8 worst...
+cyclomatic complexity diagram....important,,,,,,
+
+no of closed boundary +1
+1.implement insertion sort case insensitive string
+2. sum of odd placed even digits in a num.
+
+
+
+
+
