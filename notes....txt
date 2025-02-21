@@ -35,6 +35,7 @@ no of closed boundary +1
 1.implement insertion sort case insensitive string
 2. sum of odd placed even digits in a num.
 
+solve problemsssss
 
 
 
