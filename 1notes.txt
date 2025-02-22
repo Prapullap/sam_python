@@ -1,5 +1,11 @@
-hiiii 
-hello
+    elif temp1.left is not None and temp1.right is not None:  # Node to be deleted has two children
+        temp3 = temp1.right
+        temp3_parent = temp1
+        while temp3.left is not None:
+            temp3_parent = temp3
+            temp3 = temp3.left
+
+
 
 
 
