@@ -38,5 +38,14 @@ no of closed boundary +1
 solve problemsssss
 
 
+route=link
+mongodb it gives its object .....python makes its own object to understand 
+jasonifying python object
+
+postman
+
+
+
+
 
 
