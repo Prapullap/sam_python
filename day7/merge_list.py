@@ -1,5 +1,4 @@
-# merge_menu.py
-# merge_menu.py
+# merge_list.py
 from single_linked_list import Node, SinglyLinkedList
 import sys
 

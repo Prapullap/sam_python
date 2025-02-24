@@ -1,3 +1,4 @@
+# single_linked_list.py
 import sys
 
 class Node:
@@ -98,5 +99,6 @@ class Menu:
     def display(self):
         self.linked_list.display()
 
-menu = Menu()
-menu.run_menu()
+if __name__ == "__main__":
+    menu = Menu()
+    menu.run_menu()
