@@ -3,20 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the dataset
-file_path = "hackathon\DGCA_DATA.csv"  
-df = pd.read_csv(file_path)
-
-# Fix column name issues (strip any unwanted spaces)
-df.columns = df.columns.str.strip()
-
-# Convert 'Month' to datetime format
-df['Month'] = pd.to_datetime(df['Month'], format='%m/%Y')
-
-# Sort data by date
-df = df.sort_values(by='Month')
-
-
 def plot_flight_departures(df):
     """Plots the trend of flight departures over time."""
     plt.figure(figsize=(12, 6))
@@ -60,7 +46,55 @@ def plot_weight_load_factor(df):
     plt.show()
 
 
-# Call the functions
-plot_flight_departures(df)
-plot_pax_load_vs_seat_kms(df)
-plot_weight_load_factor(df)
+
+# Load the dataset
+df = pd.read_csv('Hackathon\DGCA_DATA.csv')
+
+# Convert 'Month' to datetime format
+df['Month'] = pd.to_datetime(df['Month'], format='%m/%Y')
+df = df.sort_values('Month')
+df = df.dropna()
+
+def load_data():
+    df = pd.read_csv('Hackathon/DGCA_DATA.csv')
+    df['Month'] = pd.to_datetime(df['Month'], format='%m/%Y')
+    df = df.sort_values('Month').dropna()
+    return df
+
+def display_menu():
+    print("\nAviation Data Analysis Menu:")
+    print("1. Plot Flight Departures Over Time")
+    print("2. Plot Passenger Load Factor vs Available Seat Kilometers")
+    print("3. Plot Weight Load Factor Over Time")
+
+def main():
+    df = load_data()
+    while True:
+        display_menu()
+        choice = input("Enter your choice (0-3): ")
+        
+        match choice:
+            case '1':
+                plot_flight_departures(df)
+            case '2':
+                plot_pax_load_vs_seat_kms(df)
+            case '3':
+                plot_weight_load_factor(df)
+            case '0':
+                print("Exiting program.")
+                break
+            case _:
+                print("Invalid choice. Please select a number between 0 and 3.")
+
+if __name__ == "__main__":
+    main()
+           
+            
+
+
+
+
+
+
+
+
